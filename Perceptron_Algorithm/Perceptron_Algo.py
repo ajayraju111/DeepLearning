@@ -19,7 +19,7 @@ def prediction(X, W, b):
 
 def perceptronStep(X, y, W, b, learn_rate = 0.01):
     for i in range(len(X)):
-        pred = prediction(X,W,b)
+        pred = prediction(X[i],W,b)
         if y[i]-pred == 1:
             for j in range(len(W)):
                 W[j]+=X[i][j]*learn_rate
